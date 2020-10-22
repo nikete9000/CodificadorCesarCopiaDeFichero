@@ -12,13 +12,26 @@ public class main {
 		}
 		Collections.sort(ColaProceso.cola,(p1,p2) -> {return Integer.compare(p1.getDuracion(), p2.getDuracion());});
 		size=ColaProceso.cola.size();
+		/*
+		ColaProceso.cola.stream().forEach((p) -> {
+				System.out.println("***********************************");
+				try {
+					ColaProceso.sirve();
+				} catch (InterruptedException e) {
+					System.out.println(e.getMessage());
+				}});
+		System.out.println("***********************************");
+		System.out.println("TERMINADO");
+		*/
 		for (int i = 0; i < size; i++) {
 			try {
 				System.out.println("***********************************");
 				ColaProceso.sirve();
 			} catch (InterruptedException e) {
-				System.out.println(e.getMessage());
+				
 			}
 		}
+		System.out.println("***********************************");
+		System.out.println("TERMINADO");
 	}
 }
