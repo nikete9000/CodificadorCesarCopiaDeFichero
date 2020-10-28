@@ -2,7 +2,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class main {
-	//Comentario prueba
+	//Comentario
 	public static void main(String[] args) {
 		Proceso process;
 		int size;
