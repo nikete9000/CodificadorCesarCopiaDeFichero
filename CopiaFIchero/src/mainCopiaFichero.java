@@ -11,52 +11,18 @@ public class mainCopiaFichero {
 				BufferedWriter bfw = new BufferedWriter(new FileWriter("ficheros\\fichero_copia.txt"))){
 			String linea;
 			while ((linea=bfr.readLine()) !=null) {
-				bfw.write(codificador(linea));
+				bfw.write(Codificador.codifica(linea));
 				bfw.newLine();
+			}
+			try (BufferedReader bfrCopia = new BufferedReader(new FileReader("ficheros\\fichero_copia.txt"))){
+				while ((linea=bfrCopia.readLine()) !=null) {
+					System.out.println(Codificador.decodifica(linea));
+				}
+			} catch (IOException e) {
+				System.out.println(e.getMessage());
 			}
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
 		}
 	}
-	private static String codificador(String linea) {
-		StringBuilder codificado=new StringBuilder();
-		for (int i = 0; i < linea.length(); i++) {
-			switch (linea.charAt(i)) {
-			case 'A': {
-				codificado.append("4");
-			}
-			case 'I': {
-				codificado.append("1");
-			}
-			case 'Z': {
-				codificado.append("2");
-			}
-			case 'E': {
-				codificado.append("3");
-			}
-			case 'S': {
-				codificado.append("5");
-			}
-			case 'G': {
-				codificado.append("6");
-			}
-			case 'T': {
-				codificado.append("7");
-			}
-			case 'B': {
-				codificado.append("8");
-			}
-			case 'P': {
-				codificado.append("9");
-			}
-			case 'O': {
-				codificado.append("0");
-			}
-			default:
-				codificado.append(linea.charAt(i));
-			}
-		}
-		return codificado.toString();
-	}
-
 }
