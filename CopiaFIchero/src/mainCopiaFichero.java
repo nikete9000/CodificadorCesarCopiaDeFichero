@@ -14,12 +14,13 @@ public class mainCopiaFichero {
 				bfw.write(Codificador.codifica(linea));
 				bfw.newLine();
 			}
-			try (BufferedReader bfrCopia = new BufferedReader(new FileReader("ficheros\\fichero_copia.txt"))){
-				while ((linea=bfrCopia.readLine()) !=null) {
-					System.out.println(Codificador.decodifica(linea));
-				}
-			} catch (IOException e) {
-				System.out.println(e.getMessage());
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+		}
+		try (BufferedReader bfrCopia = new BufferedReader(new FileReader("ficheros\\fichero_copia.txt"))){
+			String linea;
+			while ((linea=bfrCopia.readLine())  !=null) {
+				System.out.println(Codificador.decodifica(linea));
 			}
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
