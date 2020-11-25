@@ -1,0 +1,14 @@
+ El volumen de la unidad H es 32GB
+ El n£mero de serie del volumen es: E8B2-3319
+
+ Directorio de H:\2 DAM\PSP\Ejercicios\Ejercicio2y3ListadoDeFichero
+
+18/11/2020  08:52    <DIR>          .
+18/11/2020  08:52    <DIR>          ..
+17/11/2020  18:28               396 .classpath
+17/11/2020  18:28               404 .project
+17/11/2020  18:28    <DIR>          .settings
+18/11/2020  08:40    <DIR>          bin
+18/11/2020  08:40    <DIR>          src
+               2 archivos            800 bytes
+               5 dirs   9.721.995.264 bytes libres
